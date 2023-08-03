@@ -10,7 +10,7 @@ export default function App() {
       setItems([...items, { key: String(items.length), text: text }]);
       setText("");
     } else {
-      alert("campo vazio!");
+      alert("Campo vazio.");
     }
   };
 
@@ -25,7 +25,7 @@ export default function App() {
         style={styles.input}
         onChangeText={setText}
         value={text}
-        placeholder="Digite a tarefa"
+        placeholder="Digite aqui"
         onSubmitEditing={addItem}
       />
       <TouchableOpacity style={styles.button} onPress={addItem}>
@@ -37,7 +37,7 @@ export default function App() {
           <View style={styles.itemContainer}>
             <Text style={styles.itemText}>{item.text}</Text>
             <TouchableOpacity style={styles.buttonDelete} onPress={() => removeItem(item.key)}>
-              <Text style={styles.buttonDeleteText}>Delete</Text>
+              <Text style={styles.buttonDeleteText}>Deletar</Text>
             </TouchableOpacity>
           </View>
         )}
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   itemText: {
     flex: 1,
-    fontSize: 18,
+    fontSize: 16,
   },
   buttonDelete: {
     backgroundColor: "#ff3b3b",
